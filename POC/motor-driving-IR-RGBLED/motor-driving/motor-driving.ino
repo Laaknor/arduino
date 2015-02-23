@@ -19,6 +19,10 @@ int enableB = 6; // ENB
 int pinB1 = 5; //IN4
 int pinB2 = 4; // IN3
 
+int redPin = 0;
+int greenPin = 1;
+int bluePin = 2;
+
 void setup() {
  
  pinMode(enableA, OUTPUT);
@@ -28,6 +32,11 @@ void setup() {
  pinMode(enableB, OUTPUT);
  pinMode(pinB1, OUTPUT);
  pinMode(pinB2, OUTPUT);
+ 
+ pinMode(redPin, OUTPUT);
+ pinMode(greenPin, OUTPUT);
+ pinMode(bluePin, OUTPUT); 
+ 
  irrecv.enableIRIn();
  Serial.begin(9600);
  
@@ -210,3 +219,11 @@ void brake(int time)
  motorBBrake();
  delay(time);
 }
+
+void ledcolor (int color) {
+  switch (ledcolor) {
+    
+    
+  } // End switch
+  
+} // End function ledcolor
